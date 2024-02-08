@@ -5,7 +5,6 @@ body{
   min-height: 100vh;
 }
 
-
   h1{
     color: brown;
   }
@@ -17,7 +16,6 @@ body{
   main {
     margin-bottom: 100px; /* Igual a la altura del footer */
     margin-bottom: 5px; /* Crea espacio para el footer */
-
   }
 
 
@@ -97,8 +95,6 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
 }
 
 
-
-
 .carrusel-top{
   width: 100%;
   margin: 0 auto; /* Centra la sección horizontalmente */
@@ -127,7 +123,6 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
 
 .abajo{
   margin: 2%;
-
 }
 
 .abajo:hover {
