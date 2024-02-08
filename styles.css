@@ -46,9 +46,6 @@ body{
   }
 
 
-
-
-/* Estilo para NAVBAR */
 /* Estilo para NAVBAR */
 nav {
   display: flex;
@@ -56,7 +53,6 @@ nav {
   justify-content: space-between;
   background-color: rgb(12, 12, 16);
   align-content: center;
-  
 }
 
 nav.navbar ul.navbar-nav li.nav-item a.nav-link {
