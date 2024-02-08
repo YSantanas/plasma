@@ -49,27 +49,28 @@ body{
 
 
 /* Estilo para NAVBAR */
+/* Estilo para NAVBAR */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(12, 12, 16);
   align-content: center;
-
+  
 }
-
 
 nav.navbar ul.navbar-nav li.nav-item a.nav-link {
   color: white; /* Color del texto blanco */
+  margin: 10px;
 }
-
 
 /* Estilo hover para los elementos de navegación */
 nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
-  color: rgba(211, 77, 156, 0.819) !important; /* Cambia el color del texto al pasar el mouse */
+  color: rgba(247, 86, 158, 0.819); /* Cambia el color del texto al pasar el mouse */
+  border: 2px dashed rgba(247, 86, 158, 0.819); /* Borde punteado rosa con opacidad */
+  border-radius: 50px; /* Radio de las esquinas */
+
 }
-
-
 
 .navbar-light .navbar-toggler-icon {
   background-image: url("./img/menu.svg"); /* URL del archivo SVG */
@@ -81,12 +82,10 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
   box-shadow: 0 0 0 1px rgba(249, 248, 248, 0.152); /* Borde blanco al presionar el botón */
 }
 
-
-
 /* Estilo para pantallas más pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .logo {
-    max-height: 90px; /* Ajusta la altura máxima del logo para pantallas grandes */
+    max-height: 150px; /* Ajusta la altura máxima del logo para pantallas grandes */
     width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
   }
 
@@ -99,20 +98,11 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
     display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
     margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
   }
+
+
 }
 
-/* Estilo para pantallas grandes */
-@media (min-width: 992px) {
-  nav {
-    height: 100px; /* Ajusta la altura del navbar para pantallas grandes */
-  }
 
-  
-  .logo {
-    max-height: 150px; /* Ajusta la altura máxima del logo para pantallas grandes */
-    width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
-  }
-}
 
 
 .carrusel-top{
