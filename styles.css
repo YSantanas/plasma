@@ -28,14 +28,14 @@ body{
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(230, 230, 232, 0.888);
+    background-color: rgba(25, 25, 25, 0.955);
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
   }
   
   .footer p {
-    color: black; /* Cambiar el color del texto a negro */
+    color: rgb(213, 212, 212); /* Cambiar el color del texto a negro */
   }
   
 
@@ -98,8 +98,6 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
     display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
     margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
   }
-
-
 }
 
 
