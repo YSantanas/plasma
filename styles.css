@@ -1,48 +1,45 @@
-body{
+body {
   background-color: rgb(255, 249, 251);
   color: blueviolet;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
 
-  h1{
-    color: brown;
-  }
-  
-  h3{
-    color: aqua;
-  }
-  
-  main {
-    margin-bottom: 100px; /* Igual a la altura del footer */
-    margin-bottom: 5px; /* Crea espacio para el footer */
-  }
+h1 {
+  color: brown;
+}
 
+h3 {
+  color: aqua;
+}
 
-  footer {
-    position: sticky;
-    top: calc(100vh - 5px); /* Ajusta la posición vertical */
-    margin-top: 10%; /* Crea espacio desde el main */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(25, 25, 25, 0.955);
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-  }
-  
-  .footer p {
-    color: rgb(213, 212, 212); /* Cambiar el color del texto a negro */
-  }
-  
+main {
+  margin-bottom: 100px; /* Igual a la altura del footer */
+  margin-bottom: 5px; /* Crea espacio para el footer */
+}
 
-  .logo {
-    max-width: 50%;
-    height: auto;
-    object-fit: contain; /* Ajusta a contain, cover o fill */
-  }
+footer {
+  position: sticky;
+  top: calc(100vh - 5px); /* Ajusta la posición vertical */
+  margin-top: 10%; /* Crea espacio desde el main */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(25, 25, 25, 0.955);
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
 
+.footer p {
+  color: rgb(213, 212, 212); /* Cambiar el color del texto a negro */
+}
+
+.logo {
+  max-width: 50%;
+  height: auto;
+  object-fit: contain; /* Ajusta a contain, cover o fill */
+}
 
 /* Estilo para NAVBAR */
 nav {
@@ -60,10 +57,14 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link {
 
 /* Estilo hover para los elementos de navegación */
 nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
-  color: rgba(247, 86, 158, 0.819); /* Cambia el color del texto al pasar el mouse */
+  color: rgba(
+    247,
+    86,
+    158,
+    0.819
+  ); /* Cambia el color del texto al pasar el mouse */
   border: 2px dashed rgba(247, 86, 158, 0.819); /* Borde punteado rosa con opacidad */
   border-radius: 50px; /* Radio de las esquinas */
-
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -94,16 +95,80 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
   }
 }
 
-
-.carrusel-top{
+.carrusel-top {
   width: 100%;
   margin: 0 auto; /* Centra la sección horizontalmente */
 }
 
-.carousel-item img {
-  object-fit: cover;
+.carousel-item {
+  position: relative; /* Permite posicionar el texto de forma absoluta */
 }
 
+.carrusel-nuevo {
+  width: 100%;
+  margin: 0 auto; /* Centra la sección horizontalmente */
+  overflow: hidden;
+  position: relative; /* Importante para la animación */
+  height: auto; /* Ajusta la altura del carrusel según sea necesario */
+}
+.carrusel-nuevo ul {
+  display: flex;
+  padding: 0;
+  width: 300%;
+  animation: animacionC 10s infinite alternate ease-in-out;
+}
+.carrusel-nuevo li {
+  width: 33.33%; /* Ajusta el ancho de cada imagen según el número de imágenes */
+  list-style: none;
+  position: relative;
+}
+
+.texto-carrousel{
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  bottom: 20px; /* Ajusta la posición vertical del texto */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80%; /* Ajusta el ancho del contenedor de texto */
+  border-radius: 5px;
+
+}
+
+.texto-carrousel h2{
+  font-size: 24px;
+  margin-bottom: 10px;
+  
+}
+.carrusel-nuevo img{
+  width: 100%;
+  height: auto; /* Para mantener la proporción */
+
+}
+
+@keyframes animacionC {
+  0% { margin-left: 0; }
+  25% { margin-left: 0; }
+  30% { margin-left: -100%; }
+  55% { margin-left: -100%; }
+  60% { margin-left: -200%; }
+  85% { margin-left: -200%; }
+  90% { margin-left: -100%; }
+  100% { margin-left: -100%; }
+}
+@media screen and (max-width: 768px) {
+  .texto-carrousel {
+    padding: 5px; /* Ajusta el padding para pantallas más pequeñas */
+  }
+  .texto-carrousel h2 {
+    font-size: 6px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+  }
+  .texto-carrousel p {
+    font-size: 7px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+  }
+}
 
 /* Contenedores */
 
@@ -115,28 +180,31 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
   text-align: center;
 }
 
-
 .titulo-top {
   margin-top: 1%;
   color: rgb(247, 86, 158);
 }
 
-.abajo{
+.abajo {
   margin: 2%;
 }
 
 .abajo:hover {
   opacity: 0.8; /* Reducir la opacidad al pasar el mouse */
-  background-color: rgba(208, 204, 204, 0.153); /* Agregar un color de fondo con transparencia */
+  background-color: rgba(
+    208,
+    204,
+    204,
+    0.153
+  ); /* Agregar un color de fondo con transparencia */
   transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
   box-shadow: 0 0 20px rgba(246, 164, 220, 0.621); /* Agregar sombra al pasar el mouse */
 }
 
-
 /* Card */
 
-.container-carrusel{
-margin: 2%;
+.container-carrusel {
+  margin: 2%;
 }
 
 .card {
@@ -148,7 +216,6 @@ margin: 2%;
 .card:hover {
   box-shadow: 0 0 20px rgba(249, 110, 177, 0.763); /* Agregar sombra al tocar la tarjeta */
 }
-
 
 @media (max-width: 767.98px) {
   .row {
@@ -166,17 +233,13 @@ margin: 2%;
   margin-top: 5%;
   margin-left: auto; /* Situar en el centro horizontal */
   margin-right: auto; /* Situar en el centro horizontal */
-
 }
 
 .separador:hover {
   box-shadow: 0 0 20px rgba(255, 253, 253, 0.763); /* Agregar sombra al tocar la tarjeta */
 }
 
-
 /* Contenedor */
-
-
 
 .contenedor-color {
   margin-top: 5%;
