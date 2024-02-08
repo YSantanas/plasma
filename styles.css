@@ -107,20 +107,12 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
     height: 100px; /* Ajusta la altura del navbar para pantallas grandes */
   }
 
-
-
-
-
   
   .logo {
     max-height: 150px; /* Ajusta la altura máxima del logo para pantallas grandes */
     width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
   }
 }
-
-
-
-
 
 
 .carrusel-top{
@@ -143,15 +135,6 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
   text-align: center;
 }
 
-.formaLuna {
-  width: 50px; 
-  height: 50px; 
-  border-radius: 50%; 
-  box-shadow: 15px 15px 0 0 rgba(239, 239, 239, 0.953);
-  margin-right: 30px; /* Añadir margen a la derecha para separar del título */
-  margin-bottom: 3%;
- 
-}
 
 .titulo-top {
   margin-top: 1%;
@@ -159,15 +142,15 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
 }
 
 .abajo{
-  filter: invert(100%); /* Invertir los colores del icono */
+  margin: 2%;
 
 }
 
 .abajo:hover {
   opacity: 0.8; /* Reducir la opacidad al pasar el mouse */
-  background-color: rgba(255, 255, 255, 0.622); /* Agregar un color de fondo con transparencia */
+  background-color: rgba(208, 204, 204, 0.153); /* Agregar un color de fondo con transparencia */
   transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
-  box-shadow: 0 0 20px rgba(255, 253, 253, 0.621); /* Agregar sombra al pasar el mouse */
+  box-shadow: 0 0 20px rgba(246, 164, 220, 0.621); /* Agregar sombra al pasar el mouse */
 }
 
 
