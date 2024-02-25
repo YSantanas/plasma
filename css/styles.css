@@ -1,53 +1,9 @@
-body {
-  background-color: rgb(255, 249, 251);
-  color: blueviolet;
-  font-family: "Roboto", sans-serif;
-  min-height: 100vh;
-}
-
-h1 {
-  color: brown;
-}
-
-h3 {
-  color: aqua;
-}
-
-main {
-  margin-bottom: 100px; /* Igual a la altura del footer */
-  margin-bottom: 5px; /* Crea espacio para el footer */
-}
-
-footer {
-  position: sticky;
-  top: calc(100vh - 5px); /* Ajusta la posición vertical */
-  margin-top: 10%; /* Crea espacio desde el main */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(25, 25, 25, 0.955);
-  text-align: center;
-  padding-top: 2%;
-  padding-bottom: 2%;
-}
-
-.footer p {
-  color: rgb(213, 212, 212); /* Cambiar el color del texto a negro */
-}
-
-.logo {
-  max-width: 50%;
-  height: auto;
-  object-fit: contain; /* Ajusta a contain, cover o fill */
-}
-
-/* Estilo para NAVBAR */
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(12, 12, 16);
-  align-content: center;
+  background-image: linear-gradient(
+    to right,
+    #080808,
+    #380235
+  ); /* Degradado de colores */
 }
 
 nav.navbar ul.navbar-nav li.nav-item a.nav-link {
@@ -55,21 +11,34 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link {
   margin: 10px;
 }
 
+/* Estilo base para los elementos de navegación */
+nav.navbar ul.navbar-nav li.nav-item a.nav-link {
+  transition: color 0.3s ease; /* Agrega una transición suave al color del texto */
+
+  border-bottom: 2px solid transparent; /* Establece un borde transparente inicialmente */
+  padding-bottom: 10px; /* Añade espacio para la línea punteada */
+  display: inline-block; /* Asegura que el elemento se muestre en línea */
+}
+
 /* Estilo hover para los elementos de navegación */
 nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
-  color: rgba(
-    247,
-    86,
-    158,
-    0.819
-  ); /* Cambia el color del texto al pasar el mouse */
-  border: 2px dashed rgba(247, 86, 158, 0.819); /* Borde punteado rosa con opacidad */
-  border-radius: 50px; /* Radio de las esquinas */
+  color: rgba(206, 117, 228, 0.819); /* Cambia el color del texto */
+  border-bottom: 2px solid rgba(157, 4, 171, 0.819); /* Cambia el borde a punteado al pasar el mouse */
+  transform: translateY(2px) rotate(3deg); /* Rota el enlace al pasar el mouse */
+}
+
+.navbar a {
+  color: white; /* Cambia el color del texto a blanco */
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("./img/menu.svg"); /* URL del archivo SVG */
   filter: invert(100%); /* Invertir los colores del icono */
+}
+
+.card-img-top {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* Esto asegura que la imagen se ajuste dentro del tamaño fijo sin distorsionarla */
 }
 
 .navbar-toggler:focus,
@@ -95,6 +64,8 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
   }
 }
 
+/* CARRUSEL */
+
 .carrusel-top {
   width: 100%;
   margin: 0 auto; /* Centra la sección horizontalmente */
@@ -106,12 +77,12 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
 
 .carrusel-nuevo {
   width: 100%;
-  margin: 0 auto; /* Centra la sección horizontalmente */
+  margin: -3rem auto 0; /* Ajusta el margen superior */
   overflow: hidden;
-  position: relative; /* Importante para la animación */
-  height: auto; /* Ajusta la altura del carrusel según sea necesario */
-  
+  position: relative;
+  height: auto;
 }
+
 .carrusel-nuevo ul {
   display: flex;
   padding: 0;
@@ -124,7 +95,7 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
   position: relative;
 }
 
-.texto-carrousel{
+.texto-carrousel {
   position: absolute;
   text-align: center;
   padding: 20px;
@@ -135,29 +106,42 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
   background-color: rgba(0, 0, 0, 0.5);
   width: 80%; /* Ajusta el ancho del contenedor de texto */
   border-radius: 5px;
-
 }
 
-.texto-carrousel h2{
+.texto-carrousel h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  
 }
-.carrusel-nuevo img{
+.carrusel-nuevo img {
   width: 100%;
   height: auto; /* Para mantener la proporción */
-
 }
 
 @keyframes animacionC {
-  0% { margin-left: 0; }
-  25% { margin-left: 0; }
-  30% { margin-left: -100%; }
-  55% { margin-left: -100%; }
-  60% { margin-left: -200%; }
-  85% { margin-left: -200%; }
-  90% { margin-left: -100%; }
-  100% { margin-left: -100%; }
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: -100%;
+  }
+  55% {
+    margin-left: -100%;
+  }
+  60% {
+    margin-left: -200%;
+  }
+  85% {
+    margin-left: -200%;
+  }
+  90% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: -100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .texto-carrousel {
@@ -183,7 +167,9 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
 
 .titulo-top {
   margin-top: 1%;
-  color: rgb(247, 86, 158);
+  font-size: 36px;
+  font-family: "Times New Roman", Times, serif;
+  color: #380235;
 }
 
 .abajo {
@@ -215,7 +201,7 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
 }
 
 .card:hover {
-  box-shadow: 0 0 20px rgba(249, 110, 177, 0.763); /* Agregar sombra al tocar la tarjeta */
+  box-shadow: 0 0 10px rgba(104, 0, 116, 0.763); /* Agregar sombra al tocar la tarjeta */
 }
 
 @media (max-width: 767.98px) {
@@ -229,7 +215,7 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
 }
 
 .separador {
-  border-top: 1px dashed rgba(247, 86, 158, 0.255); /* Línea delineada */
+  border-top: 1px dashed rgba(74, 8, 77, 0.255); /* Línea delineada */
   max-width: 30%;
   margin-top: 5%;
   margin-left: auto; /* Situar en el centro horizontal */
@@ -243,7 +229,7 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
 /* Contenedor */
 
 .contenedor-color {
-  margin-top: 5%;
+  margin-top: -3%;
   background-color: rgb(230, 229, 230);
   position: relative;
   width: 100%;
@@ -258,4 +244,63 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
   height: 100%;
 }
 
+/* Estilo del contenedor básico */
+.contenedorBasico {
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Alinea el texto al centro */
+  margin: 5%;
+  padding: 2%;
+}
 
+/* Estilo del título */
+.contenedorBasico h1 {
+  margin-bottom: 10px; /* Ajusta el margen inferior del título y del párrafo */
+  color: #380235;
+}
+
+/* Estilo del contenedor del botón */
+.contenedor-boton {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilo del botón */
+.boton-empezar {
+  background-color: #68145218; /* Cambia el color de fondo del botón */
+  padding: 10px 20px; /* Ajusta el padding según sea necesario */
+  border-radius: 10px; /* Añade bordes redondeados */
+  color: white; /* Cambia el color del texto */
+  text-decoration: none; /* Quita la subrayado del texto */
+
+}
+
+.boton-empezar:hover {
+  background-color: #66656585; /* Cambia el color de fondo del botón */
+  padding: 10px 20px; /* Ajusta el padding según sea necesario */
+  border-radius: 10px; /* Añade bordes redondeados */
+  color: white; /* Cambia el color del texto */
+  text-decoration: none; /* Quita la subrayado del texto */
+}
+
+
+
+/* Footer */
+
+footer {
+  position: sticky;
+  top: calc(100vh - 5px); /* Ajusta la posición vertical */
+  margin-top: 10%; /* Crea espacio desde el main */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(25, 25, 25, 0.955);
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.footer p {
+  color: rgb(213, 212, 212); /* Cambiar el color del texto a negro */
+}
